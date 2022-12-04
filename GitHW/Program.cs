@@ -51,12 +51,6 @@
 
             }
 
-            for (int i = 0; i < arrayC.Length; i++)
-            {
-                string a = arrayC[i].ToString();
-                a = a.Replace('1', 'a').Replace('3', 'b').Replace('5', 'v').Replace('3', 'd').Replace('3', 'l').Replace('3', 'j').Replace('3', 'g').Replace('3', 'k');
-                Console.Write(a + " ");
-            }
 
             
         }
