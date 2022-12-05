@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace GitHW
+﻿namespace GitHW
 {
+    using System;
+    using System.ComponentModel;
     internal class Program
     {
         static void Main(string[] args)
@@ -13,7 +13,10 @@ namespace GitHW
             object[] arrayB = new object[n];
             object[] arrayC = new object[n];
             object[] tempArray = new object[n];
-            string[] alphabet = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
+            char[] alphabet = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
+            char[] upper = { 'a', 'e', 'i', 'd', 'h', 'j' };
+            int b = 0;
+            int c = 0;
 
             for (int i = 0; i < arrayA.Length; i++)
             {
@@ -22,7 +25,6 @@ namespace GitHW
 
             }
            
-            Console.WriteLine();
 
             for (int i = 0; i < arrayB.Length; i++)
             {
@@ -34,11 +36,8 @@ namespace GitHW
                 else {
                    arrayB[i] = numb; 
                 }
-
-                Console.Write(arrayB[i] + " ");
             }
 
-            Console.WriteLine();
 
             for (int i = 0; i < arrayC.Length; i++)
             {
@@ -52,10 +51,8 @@ namespace GitHW
                     numb++;
                     arrayC[i] = numb;
                 }
-                Console.Write(arrayC[i] + " ");
             }
 
-            Console.WriteLine();
 
             for (int i = 0; i < arrayB.Length; i++)
             {
@@ -71,7 +68,7 @@ namespace GitHW
 
             for (int i = 0; i < arrayC.Length; i++)
             {
-                for (int num = 0; num < 27; num++)
+                for (int num = 0; num < 26; num++)
                 {
                     if (Convert.ToInt32(arrayC[i]) == num)
                     {
@@ -81,6 +78,57 @@ namespace GitHW
                 arrayC[i] = tempArray[i];
             }
 
+            Console.WriteLine("B:");
+
+            for (int i = 0; i < arrayB.Length; i++)
+            {
+                for (int num = 0; num < 6; num++)
+                {
+                    if (Convert.ToChar(arrayB[i]) == upper[num])
+                    {
+                        arrayB[i] = Char.ToUpper(Convert.ToChar(arrayB[i]));
+                    }
+                }
+                if (Char.IsUpper(Convert.ToChar(arrayB[i])))
+                {
+                    b++;
+                }
+                Console.Write(arrayB[i] + " ");
+            }
+            Console.WriteLine();
+            Console.WriteLine("C:");
+
+            for (int i = 0; i < arrayC.Length; i++)
+            {
+                for (int num = 0; num < 6; num++)
+                {
+                    if (Convert.ToChar(arrayC[i]) == upper[num])
+                    {
+                        arrayC[i] = Char.ToUpper(Convert.ToChar(arrayC[i]));
+                    }
+                }
+                if (Char.IsUpper(Convert.ToChar(arrayC[i])))
+                {
+                    c++;
+                }
+                Console.Write(arrayC[i] + " ");
+                
+            }
+
+            Console.WriteLine();
+            Console.WriteLine();
+            if (b > c)
+            {
+                Console.WriteLine("B>");
+            }
+            else if (b < c)
+            {
+                Console.WriteLine("C>");
+            }
+            else
+            {
+                Console.WriteLine("+");
+            }
 
 
 
