@@ -128,7 +128,7 @@ namespace GitHW
             }
             else
             {
-                Console.WriteLine("=");
+                Console.WriteLine("==");
             }
         }
     }
