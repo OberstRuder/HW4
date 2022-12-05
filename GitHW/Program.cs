@@ -1,7 +1,6 @@
 ﻿namespace GitHW
 {
     using System;
-    using System.ComponentModel;
     internal class Program
     {
         static void Main(string[] args)
