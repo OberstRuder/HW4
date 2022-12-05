@@ -1,6 +1,8 @@
-﻿namespace GitHW
+﻿// GitHW
+namespace GitHW
 {
     using System;
+
     internal class Program
     {
         static void Main(string[] args)
@@ -21,18 +23,19 @@
             {
                 int numb = new Random().Next(1, 26);
                 arrayA[i] = numb;
-
             }
-           
+
 
             for (int i = 0; i < arrayB.Length; i++)
             {
                 int numb = new Random().Next(1, 26);
-                if (numb % 2 == 0){
+                if (numb % 2 == 0)
+                {
                     numb++;
                     arrayB[i] = numb;
                 } 
-                else {
+                else 
+                {
                    arrayB[i] = numb; 
                 }
             }
@@ -111,7 +114,6 @@
                     c++;
                 }
                 Console.Write(arrayC[i] + " ");
-                
             }
 
             Console.WriteLine();
@@ -126,11 +128,8 @@
             }
             else
             {
-                Console.WriteLine("+");
+                Console.WriteLine("=");
             }
-
-
-
         }
     }
 }
